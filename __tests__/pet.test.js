@@ -30,7 +30,7 @@ describe("growUp", () => {
   it("decrease fitness by 3", () => {
     const pet = new Pet("Fido");
     pet.growUp();
-    expect(pet.fitness).toEqual(-3);
+    expect(pet.fitness).toEqual(7);
   });
 });
 
@@ -50,6 +50,37 @@ describe("walk", () => {
         expect(pet.fitness).toEqual(10);
       });
 });
+
+describe("feed", () => {
+    it("decreases hunger level by 3", () => { 
+        const pet = new Pet('fido');
+        pet.hunger = 0;
+        pet.feed();
+        expect(pet.hunger).toEqual(0);
+    
+    })
+
+    it("decreases hunger level by 3", () => { 
+        const pet = new Pet('fido');
+        pet.hunger = 7;
+        pet.feed();
+        expect(pet.hunger).toEqual(4);
+    
+    })
+
+    it("decreases hunger level by 3", () => { 
+        const pet = new Pet('fido');
+        pet.hunger = 2;
+        pet.feed();
+        expect(pet.hunger).toEqual(0);
+    
+    })
+})
+
+describe("checkup", () => {
+    it()
+})
+
 
 
 
